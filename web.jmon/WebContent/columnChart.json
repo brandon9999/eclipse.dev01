@@ -1,0 +1,9 @@
+{
+  "cols": [
+        {"label":"Country","type":"string"},
+        {"label":"GDP","type":"number"}
+      ],
+  "rows": [
+        {"c":[{"v":"Mushrooms","f":null},{"v":5,"f":null}]}
+      ]
+}
