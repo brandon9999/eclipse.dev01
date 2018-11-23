@@ -18,28 +18,31 @@ public class ParseTest3 {
         JSONParser parser = new JSONParser();
  
         try {
- 
-          //  Object obj = parser.parse(new FileReader(
-          //          "C:\\DevHome\\jsontest\\file1.json"));
- 
-
               Object obj = parser.parse(new FileReader(
                      "C:\\DevHome\\jsontest\\jsonresponse.json"));
             
-            JSONObject jsonObject = (JSONObject) obj;
+            JSONObject jsonobj = (JSONObject) obj;
             
-            JSONArray companyList = (JSONArray) jsonObject.get("column-names");
- 
-            System.out.println("\nCompany List:");
-            Iterator<String> iterator = companyList.iterator();
-            while (iterator.hasNext()) {
-                System.out.println(iterator.next());
-            }
+              
+
+          	System.out.print(jsonobj.);
+              
+            /*
+            for(int i=0;i<jsonArray.size();i++){
+
+            	JSONObject jsonObj = (JSONObject)jsonArray.get(i);
+
+            	System.out.print(jsonObj.get("1"));
+
+            	}
+*/
+
 
             
-            
-            
 /*
+            Object obj = parser.parse(new FileReader(
+                    "C:\\DevHome\\jsontest\\file1.json"));
+ 
             JSONObject jsonObject = (JSONObject) obj;
 
             String name = (String) jsonObject.get("Name");
