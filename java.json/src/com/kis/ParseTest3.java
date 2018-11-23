@@ -22,10 +22,8 @@ public class ParseTest3 {
                      "C:\\DevHome\\jsontest\\jsonresponse.json"));
             
             JSONObject jsonobj = (JSONObject) obj;
-            
-              
 
-          	System.out.print(jsonobj.);
+            System.out.print(jsonobj.toJSONString());
               
             /*
             for(int i=0;i<jsonArray.size();i++){
