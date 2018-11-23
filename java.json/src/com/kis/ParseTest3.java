@@ -25,7 +25,7 @@ public class ParseTest3 {
 
             System.out.print(jsonobj.toJSONString());
               
-            /*
+/*
             for(int i=0;i<jsonArray.size();i++){
 
             	JSONObject jsonObj = (JSONObject)jsonArray.get(i);
