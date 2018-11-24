@@ -6,6 +6,9 @@ import java.util.Iterator;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
  
 /**
  * https://crunchify.com/how-to-read-json-object-from-file-in-java/
@@ -18,45 +21,22 @@ public class ParseTest3 {
         JSONParser parser = new JSONParser();
  
         try {
-              Object obj = parser.parse(new FileReader(
-                     "C:\\DevHome\\jsontest\\jsonresponse.json"));
-            
-            JSONObject jsonobj = (JSONObject) obj;
+        /*	
+              JsonParser jsonParser = new JsonParser();
+              JsonObject jsonObject = (JsonObject) jsonParser.parse(new FileReader(
+                      "D:\\nfs01\\DevHome\\Home.JSON\\curl01\\sample01.json"));
+              System.out.print("name : " + jsonObject.get("name"));
+      */
+        	
+        	JsonParser jsonParser = new JsonParser();
 
-            System.out.print(jsonobj.toJSONString());
-              
-/*
-            for(int i=0;i<jsonArray.size();i++){
+        	JsonObject jsonObject = (JsonObject) jsonParser.parse(new FileReader(
+                    "D:\\nfs01\\DevHome\\Home.JSON\\curl01\\sample01.json"));
+        	JsonObject dataObject = (JsonObject) jsonObject.get("data");
 
-            	JSONObject jsonObj = (JSONObject)jsonArray.get(i);
-
-            	System.out.print(jsonObj.get("1"));
-
-            	}
-*/
-
-
-            
-/*
-            Object obj = parser.parse(new FileReader(
-                    "C:\\DevHome\\jsontest\\file1.json"));
- 
-            JSONObject jsonObject = (JSONObject) obj;
-
-            String name = (String) jsonObject.get("Name");
-            String author = (String) jsonObject.get("Author");
-            System.out.println("Name: " + name);
-            System.out.println("Author: " + author);
-
-            JSONArray companyList = (JSONArray) jsonObject.get("Company List");
- 
-            System.out.println("\nCompany List:");
-            Iterator<String> iterator = companyList.iterator();
-            while (iterator.hasNext()) {
-                System.out.println(iterator.next());
-            }
- */
-
+        	System.out.print("name : " + dataObject.get("name"));
+        	System.out.print("age : " + dataObject.get("age"));
+        	System.out.print("birth : " + dataObject.get("birth"));	
  
         } catch (Exception e) {
             e.printStackTrace();
