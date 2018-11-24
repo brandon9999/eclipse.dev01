@@ -75,14 +75,14 @@ public class ParseTest4 {
 	       		System.out.print("row-key : " + jsonObj_data_rows.get("row-key")+"\n");
 	       		System.out.print("values : " + jsonObj_data_rows.get("values")+"\n");
 	       		
-	       		JsonParser jsonParse_tmp = new JsonParser();
-	           	Object ojbect_tmp = jsonParse_tmp.parse(jsonObj_data_rows.get("values").toString());
-	           	JsonArray jsonArray_tmp = (JsonArray) ojbect_tmp;
-	       		System.out.print("array size : " + jsonArray_tmp.size()+"\n");
+	       		JsonParser jsonParse_svr = new JsonParser();
+	           	Object ojbect_svr = jsonParse_svr.parse(jsonObj_data_rows.get("values").toString());
+	           	JsonArray jsonArray_svr = (JsonArray) ojbect_svr;
+	       		System.out.print("array size : " + jsonArray_svr.size()+"\n");
 	       		
-	           	for(int k=0;k<jsonArray_tmp.size();k++)
+	           	for(int k=0;k<jsonArray_svr.size();k++)
 	           	{	       		
-		       		System.out.print("array data : " + k + " : " + jsonArray_tmp.get(k)+"\n");
+		       		System.out.print("array data : " + k + " : " + jsonArray_svr.get(k)+"\n");
 
 	           	}
 	           	System.out.print("\n");
